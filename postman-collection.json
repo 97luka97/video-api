@@ -1,0 +1,217 @@
+{
+	"info": {
+		"_postman_id": "597b6632-7240-4efa-b27a-256fc05b92c3",
+		"name": "Video API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "29983475"
+	},
+	"item": [
+		{
+			"name": "Video List",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "{{server-api-url}}/video",
+					"host": [
+						"{{server-api-url}}"
+					],
+					"path": [
+						"video"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Video Stream",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{server-api-url}}/video/1/stream",
+					"host": [
+						"{{server-api-url}}"
+					],
+					"path": [
+						"video",
+						"1",
+						"stream"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Video Thumbnail",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{server-api-url}}/video/1/thumbnail",
+					"host": [
+						"{{server-api-url}}"
+					],
+					"path": [
+						"video",
+						"1",
+						"thumbnail"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Video Details",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "{{server-api-url}}/video/1",
+					"host": [
+						"{{server-api-url}}"
+					],
+					"path": [
+						"video",
+						"1"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Video Upload",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "video-001",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "video-001 description",
+							"type": "text"
+						},
+						{
+							"key": "video",
+							"type": "file",
+							"src": "/Users/nikolabarac/Downloads/video-002.mp4"
+						},
+						{
+							"key": "thumbnail",
+							"type": "file",
+							"src": "/Users/nikolabarac/Downloads/video-thumb-001.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{server-api-url}}/video",
+					"host": [
+						"{{server-api-url}}"
+					],
+					"path": [
+						"video"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Video Delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "title",
+							"value": "video-001",
+							"type": "text"
+						},
+						{
+							"key": "description",
+							"value": "video-001 description",
+							"type": "text"
+						},
+						{
+							"key": "video",
+							"type": "file",
+							"src": "/Users/nikolabarac/Downloads/video-002.mp4"
+						},
+						{
+							"key": "thumbnail",
+							"type": "file",
+							"src": "/Users/nikolabarac/Downloads/video-thumb-001.jpg"
+						}
+					]
+				},
+				"url": {
+					"raw": "{{server-api-url}}/video/1",
+					"host": [
+						"{{server-api-url}}"
+					],
+					"path": [
+						"video",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "{{api-token}}",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"packages": {},
+				"exec": [
+					""
+				]
+			}
+		}
+	],
+	"variable": [
+		{
+			"key": "server-api-url",
+			"value": "https://videos.gamatechsolutions.net/public/api"
+		},
+		{
+			"key": "api-token",
+			"value": "KInUaiXaFe87THyHECcbBZSW0FrHTPj9cEPYLSVJyoalQwQPwMl5CDcabuIi",
+			"type": "string"
+		}
+	]
+}
